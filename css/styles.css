@@ -17,6 +17,7 @@
   --primary-text-color: #ffffff;
   --title-text-color: #51ff00;
   --accent-color: #ffffff;
+  --button-color: #313131;
   --primary-white-color: #111111;
   --secondary-white-color: #51ff00;
   --head-footer-bgcolor: #0e0e0e;
@@ -59,12 +60,58 @@ body {
   height: auto;
 }
 
+.list .avatar {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.avatar-wrapper {
+  display: flex;
+  flex-direction: column;
+  /* ВАЖНО: элементы друг под другом */
+  align-items: center;
+  /* центр по горизонтали */
+  text-align: center;
+  /* текст тоже по центру */
+}
+
+.avatarka {
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.avatar-title {
+  margin: 0;
+  font-size: 20px;
+  color: var(--title-text-color);
+}
+
+.avatar-subtitle {
+  margin: 8px 0 0;
+  font-size: 12px;
+  line-height: 1.75;
+  max-width: 1000px;
+}
+
 .section.impotent {
-  padding-bottom: 94px;
-  padding-top: 94px;
+  background-color: var(--secondary-bgcolor);
+  padding-bottom: 120px;
+  padding-top: 120px;
 }
 .section.works {
+  padding-top: 94px;
   padding-bottom: 94px;
+}
+
+.section.title{
+  margin: 2;
+    font-size: 128px;
+    color: var(--title-text-color);
 }
 
 .section.comand {
@@ -87,8 +134,8 @@ body {
 
   max-width: 1600px;
   height: 600px;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 160px;
+  padding-bottom: 160px;
   margin-left: auto;
   margin-right: auto;
 
@@ -257,13 +304,13 @@ body {
 }
 
 .icon.post {
-  width: 16px;
-  height: 12px;
+  width: 26px;
+  height: 24px;
 }
 
 .icon.tell {
-  width: 10px;
-  height: 16px;
+  width: 28px;
+  height: 24px;
 }
 
 .contact.list .link {
@@ -272,7 +319,7 @@ body {
   padding-top: 32px;
   padding-bottom: 32px;
 
-  color: var(--primary-text-color);
+  color: var(--title-text-color);
 
   font-weight: 500;
   font-size: 14px;
@@ -647,8 +694,8 @@ textarea {
 
   width: 370px;
   height: 70px;
-  color: var(--primary-white-color);
-  background: rgba(47, 48, 58, 0.8);
+  color: var(--primary-text-color);
+  background: rgba(51, 63, 41, 0.8);
 }
 
 .work-text {
@@ -727,6 +774,11 @@ textarea {
   background-color: var(--accent-color);
 }
 .icon-contact {
+  width: 32px;
+  height: 32px;
+  fill: currentColor;
+  display: block;
+
   fill: currentColor;
 }
 
@@ -803,7 +855,7 @@ textarea {
   letter-spacing: 0.03;
 
   color: var(--title-text-color);
-  background-color: var(--secondary-bgcolor);
+  background-color: var(--button-color);
 
   display: inline-block;
   padding: 6px 22px;
@@ -957,7 +1009,7 @@ textarea {
 
 .text-footer {
   text-transform: uppercase;
-  color: var(--primary-white-color);
+  color: var(--accent-color);
 
   font-style: 700;
   font-size: 14px;
@@ -968,7 +1020,7 @@ textarea {
 
 .link-contact.footer-contact {
   color: var(--primary-white-color);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--title-text-color);
 
   transition: background-color 250ms var(--function-animation);
 }
