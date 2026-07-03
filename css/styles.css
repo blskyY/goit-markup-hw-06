@@ -89,6 +89,12 @@ body {
   margin: 0;
   font-size: 20px;
   color: var(--title-text-color);
+    transition: color 250ms var(--function-animation);
+}
+
+.avatar-title:hover,
+.avatar-title:focus {
+  color: var(--accent-color);
 }
 
 .avatar-subtitle {
@@ -700,6 +706,12 @@ textarea {
 
 .work-text {
   margin: 0;
+  transition: color 250ms var(--function-animation);
+}
+
+.work-text:hover,
+.work-text:focus {
+  color: var(--title-text-color);
 }
 
 /* наша команда */
@@ -927,7 +939,7 @@ textarea {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(33, 150, 243, 0.9);
+  background-color: rgba(81, 255, 0, 0.658);
 
   transform: translateY(100%);
   opacity: 0;
