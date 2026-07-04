@@ -26,6 +26,7 @@
   --topline-color: #ececec;
   --boder-portfolio-color: #eeeeee;
   --client-color: #afb1b8;
+  --elytra-color: #e100ff;
   --function-animation: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -76,7 +77,26 @@ body {
   /* текст тоже по центру */
 }
 
+.avatar-wrapper-elytra {
+  display: flex;
+  flex-direction: column;
+  /* ВАЖНО: элементы друг под другом */
+  align-items: center;
+  /* центр по горизонтали */
+  text-align: center;
+  /* текст тоже по центру */
+}
+
 .avatarka {
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.avatarka-elytra {
   display: block;
   width: 150px;
   height: 150px;
@@ -92,8 +112,20 @@ body {
     transition: color 250ms var(--function-animation);
 }
 
+.avatar-title-elytra {
+  margin: 0;
+  font-size: 20px;
+  color: var(--elytra-color);
+  transition: color 250ms var(--function-animation);
+}
+
 .avatar-title:hover,
 .avatar-title:focus {
+  color: var(--accent-color);
+}
+
+.avatar-title-elytra:hover,
+.avatar-title-elytra:focus {
   color: var(--accent-color);
 }
 
@@ -106,8 +138,8 @@ body {
 
 .section.impotent {
   background-color: var(--secondary-bgcolor);
-  padding-bottom: 120px;
-  padding-top: 120px;
+  padding-bottom: 80px;
+  padding-top: 80px;
 }
 .section.works {
   padding-top: 94px;
@@ -147,6 +179,25 @@ body {
 
   background-image:
     url("../images/imgbg.png");
+  background-color: #c4c4c4;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-elytra {
+  text-align: center;
+
+  max-width: 1600px;
+  height: 600px;
+  padding-top: 160px;
+  padding-bottom: 160px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-image:
+    url("../images/elytra_img.png");
   background-color: #c4c4c4;
 
   background-repeat: no-repeat;
@@ -251,6 +302,22 @@ body {
   align-items: center;
 }
 
+.site-nav .link .elytra {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--elytra-color);
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.17;
+  text-align: left;
+  letter-spacing: 0.02em;
+
+  transition: color 250ms var(--function-animation);
+}
+
 .site-nav .link {
   display: block;
   padding-top: 32px;
@@ -266,6 +333,7 @@ body {
 
   transition: color 250ms var(--function-animation);
 }
+
 
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -701,7 +769,7 @@ textarea {
   width: 370px;
   height: 70px;
   color: var(--primary-text-color);
-  background: rgba(51, 63, 41, 0.8);
+  background: rgba(72, 94, 54, 0.918);
 }
 
 .work-text {
@@ -747,7 +815,28 @@ textarea {
   margin: 0px 0px 16px;
 }
 
+.profession-elytra {
+  color: var(--primary-text-color);
+
+  font-size: 16px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  margin: 0px 0px 16px;
+}
+
 .comand-item {
+  width: 270px;
+
+  background: var(--primary-white-color);
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.comand-item-elytra {
   width: 270px;
 
   background: var(--primary-white-color);
@@ -845,6 +934,11 @@ textarea {
   height: 404px;
 }
 
+.portfolio-item {
+  width: 370px;
+  height: 404px;
+}
+
 .filters.list {
   display: flex;
   justify-content: center;
@@ -894,6 +988,10 @@ textarea {
   line-height: 2;
   text-align: left;
   letter-spacing: 0.06em;
+}
+
+.title-elytra {
+  color: var(--elytra-color);
 }
 
 .portfolio-workes {
@@ -947,7 +1045,39 @@ textarea {
     opacity 250ms var(--function-animation);
 }
 
+.overlay-portfolio-elytra {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #e100ffad;
+
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 250ms var(--function-animation),
+    opacity 250ms var(--function-animation);
+}
+
 .portfolio-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 322px;
+  height: 168px;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+
+  margin: 0;
+  padding: 0;
+
+  color: var(--primary-white-color);
+}
+
+.portfolio-text-elytra {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -982,6 +1112,23 @@ textarea {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+
+.link.portfolio-link-elytra:hover .overlay-portfolio-elytra {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.link.portfolio-link-elytra {
+  display: block;
+
+  transition: box-shadow 250ms var(--function-animation);
+}
+
+.link.portfolio-link-elytra:hover,
+.link.portfolio-link-elytra:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 /*футер*/
 
 .footer {
